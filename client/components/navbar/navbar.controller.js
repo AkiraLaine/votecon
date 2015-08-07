@@ -5,6 +5,9 @@ angular.module('workspaceApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },{
+      'title': 'Vote',
+      'link': "/vote"
     }];
 
     $scope.isCollapsed = true;
@@ -14,7 +17,7 @@ angular.module('workspaceApp')
 
     $scope.logout = function() {
       Auth.logout();
-      $location.path('/login');
+      $location.path('/');
     };
 
     $scope.isActive = function(route) {
